@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block title%}
+Il Club -{{squad.nick}} | Lega Serie A
+{%endblock%}
+
+{%block content%}
+<div class="HeaderSquad">
+<div class="ContainerTitle">
+<h2>DETTAGLI SQUADRA </h2></div>
+<div class="ContainerTOption">
+<h3 class="h3W">{{squad.nick}}</h3>
+</div>
+
+</div>
+
+<div class="SquadDetailList">
+    <div class="SquadDetailAttr">
+        <h4>Presidente :</h4>
+    </div>
+    <div class="SquadDetailPro">
+        {{squad.Presidente}}
+    </div>
+    </div>
+</div>
+{%endblock%}

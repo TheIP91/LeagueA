@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{% block title %}
+News | Serie A
+{% endblock %}
+
+{%block content%}
+
+<div class="HeaderListS">
+    <h2>NEWS</h2>
+  </div>
+
+<div class="ListNews">
+    {% for news in List %}
+
+    <article>
+        <a href={{ url_for('newsDetail',idN=news.id) }}>
+            <div class="NewsMImg">
+                <img class="newsMenuImg" src={{url_for('static', filename=news.srcImg)}}>  
+            </div>
+            <div class="NewsMText">
+                
+                <p clas="newsD">{{news.DateW}}</p>
+                <p class="newsC">{{news.category}}</p>
+                <p class="newsT">{{news.title}}</p>
+            </div>
+    </a>
+</article>
+    {%endfor%}
+
+</div>
+
+{%endblock%}

@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+<form method="POST">
+        <label for="nameP">Name Player</label>
+        <input type="text" name="nameP" 
+        value="{{ request.form['nameP'] }}"></input>
+        <button type="submit">Cerca</button>
+    </form>
+
+    <div id="resultF">
+        <p>
+            {{result.name}}
+        </p>
+        <p>{{result.surname}}</p>
+        
+    </div>
+{%endblock%}

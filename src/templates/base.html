@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav class="ContHeader">
+  <div id="ContH">
+    <div id="ColG"></div>
+    <div id="ColW"></div>
+    <div id="ColR"></div>
+  </div>
+  </div>
+  <div id="MenuH"></div>
+  <div class="LoghiSh">
+      <a href={{ url_for('squadDetail',name='Atalanta') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_atalanta.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Bologna') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_bologna.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Cagliari') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_cagliari.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Empoli') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_empoli.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Fiorentina') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_fiorentina.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Genoa') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_genoa.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Hellas Verona') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_hellas-verona.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Inter') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_inter.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Juve') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_juve.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Lazio') }} class="LogoSq"><img src="{{url_for('static', filename='/loghi/loghi_lazio.png')}}"></a>
+      <span id="SpanCenterLoghi"></span>
+      <a href={{ url_for('squadDetail',name='Milan') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_milan.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Napoli') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_napoli.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Roma') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_roma.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Salernitana') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_salernitana.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Sampdoria') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_sampdoria.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Sassuolo') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_sassuolo.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Spezia') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_spezia.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Torino') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_torino.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Udinese') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_udinese.png')}}"></a>
+      <a href={{ url_for('squadDetail',name='Venezia') }} class="LogoSq"><img src="{{url_for('static', filename='loghi/loghi_venezia.png')}}"></a>
+</div>
+<div id="LogoM"><a href="/"><img  src="/static/loghi/logo_main.png"></a></div>
+</nav>
+<div id="MenuH2">
+  <ul class="MenuH2_ul">
+    <li class="MenuH2_li"><a href="/playerList"><p>Lista giocatori</p></a></li>
+    <li class="MenuH2_li"><a href="/classifica"><p>Classifica</p></a></li>
+    <li class="MenuH2_li"><a href="/newsMenu"><p>News</p></a></li>
+  </ul>
+</div>
+<section class="content">
+  {% block content %}{% endblock %}
+</section>
+<div id="footer_logo">
+<img src="{{url_for('static', filename='/logo_footer_seriea.png')}}">
+</div>
+</body>

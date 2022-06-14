@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+
+
+{% block header %}
+  <h1>{% block title %}Classifica Serie A{% endblock %}</h1>
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="HeaderListS">
+    <h2>CLASSIFICA SERIE A</h2>
+  </div>
+  <div class="ContentTable">
+<table class="ListCla">
+  <tr>
+    <th>Squadra</th>
+    <th>Punti</th>
+    <th>Partite Giocate</th>
+    <th>Partite Vinte</th>
+    <th>Partite Pareggiate</th>
+    <th>Partite Perse</th>
+    <th>Gol Fatti</th>
+    <th>Gol Subiti</th>
+  </tr>
+{% for cal in Classifica %}
+<tr class="ClassificBlock">
+<td><p>{{cal.squadra.nick}}</p> </td>
+<td><p>{{cal.Punti}}</p></td>
+<td><p>{{cal.Partite_Giocate}}</p></td>
+<td><p>{{cal.Partite_Vinte}}</p></td>
+<td><p>{{cal.Partite_Paregg}}</p></td>
+<td><p>{{cal.Partite_Perse}}</p></td>
+<td><p>{{cal.Goal_Fatti}}</p></td>
+<td><p>{{cal.Goal_Subiti}}</p></td>
+</tr>
+
+{% endfor %}
+</table>
+</div>
+{% endblock %}

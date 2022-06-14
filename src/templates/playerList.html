@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+{% block header %}
+  <h1>{% block title %}Lista Giocatori Campionato{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="HeaderListS">
+  <h2>LISTA GIOCATORI</h2>
+</div>
+<ul class="ListP">
+{% for player in List %}
+<li class="PlayerBlock">
+<p>{{player.name}} {{player.surname}}</p>
+</li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
